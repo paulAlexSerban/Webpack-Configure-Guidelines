@@ -8,7 +8,7 @@
 
 2. Install the Webpack NPM dependencies required for a basic project build
 
-   > `$ npm install --save-dev webpack webpack-cli css-loader styles-loader sass-loader node-sass @babel/core babel-loader @babel/plugin-proposal-class-properties @babel/env terser-webpack-plugin mini-css-extract-plugin clean-webpack-plugin webpack-dev-server`
+   > `$ npm install --save-dev webpack webpack-cli css-loader styles-loader sass-loader node-sass @babel/core babel-loader @babel/plugin-proposal-class-properties @babel/preset-env terser-webpack-plugin mini-css-extract-plugin clean-webpack-plugin webpack-dev-server`
 
 3. Set folder and file srtucture - inside the project directory
 
