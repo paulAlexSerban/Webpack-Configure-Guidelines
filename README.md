@@ -12,7 +12,7 @@
 
 3. Set folder and file srtucture - inside the project directory
 
-   > `$ mkdir -p build src/common/scripts src/common/theme src/components && touch src/index.js webpack.config.js index.html`
+   > `$ mkdir -p build src/common/scripts src/common/theme src/components src/templates && touch src/index.js webpack.config.js index.html`
 
 4. Configure webpack entry file, the output file and the build mode
    > - open in editor `./webpack.config.js`
