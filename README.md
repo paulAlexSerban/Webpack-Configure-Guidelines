@@ -15,7 +15,7 @@
    > `mkdir -p build src/common/scripts src/common/theme src/components src/templates && touch src/index.js webpack.config.js index.html`
    
    3.1 - If the project is using MVC architecture
-      > - `mkdir -p src/scripts src/themes/compoenets src/themes/common && touch src/index.js src/scripts/controller.js src/scripts/view.js src/scripts/model.js src/themes/common/variables.scss src/themes/common/theme.scss src/themes/index.scss`
+      > - `mkdir -p src/scripts src/themes/compoenets src/themes/common && touch src/index.js src/index.html src/scripts/controller.js src/scripts/view.js src/scripts/model.js src/themes/common/variables.scss src/themes/common/theme.scss src/themes/index.scss`
 
 4. Configure webpack entry file, the output file and the build mode
    > - open in editor `./webpack.config.js`
