@@ -263,3 +263,76 @@ module.exports = {
      <body></body>
    </html>
    ```
+
+## Setup for Bulma as CSS framework
+
+1. Install Webpack, CSS, Sass and Bulma dependencies
+
+   > - `npm install --save-dev bulma css-loader extract-text-webpack-plugin@next mini-css-extract-plugin node-sass sass-loader style-loader webpack webpack-cli`
+
+2. Create theme file
+
+   > - `touch ./src/common/theme/theme.scss`
+
+3. Inside `theme.scss` add
+
+```css
+@charset "utf-8";
+@import "../../../node_modules/bulma/bulma.sass";
+```
+
+NOTE - Make sure the path leads to the `bulma.css` inside `node_modules` direcotry
+
+4. Inside the Webpack entry JS file (Eg. index.js) add
+
+```javascript
+import "./common/theme/theme.scss";
+```
+
+NOTE - Make sure the path leads to the new `theme.scss` file
+
+5. EXTRA - For webperformance and smaller css bundle file import only the required bulma scss file
+Eg.
+```css
+@charset "utf-8";
+
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+// Set your brand colors
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+```
+Eg. - if only buttons are used from Bulma
+```css
+  @import "../node_modules/bulma/sass/elements/button.sass";
+```
