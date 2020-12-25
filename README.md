@@ -4,15 +4,18 @@
 
 1. Initialize NPM inside the project directory
 
-   > `$ npm init`
+   > `npm init`
 
 2. Install the Webpack NPM dependencies required for a basic project build
 
-   > `$ npm install --save-dev webpack webpack-cli css-loader styles-loader sass-loader node-sass @babel/core babel-loader @babel/plugin-proposal-class-properties @babel/preset-env terser-webpack-plugin mini-css-extract-plugin clean-webpack-plugin webpack-dev-server html-webpack-plugin`
+   > `npm install --save-dev webpack webpack-cli css-loader styles-loader sass-loader node-sass @babel/core babel-loader @babel/plugin-proposal-class-properties @babel/preset-env terser-webpack-plugin mini-css-extract-plugin clean-webpack-plugin webpack-dev-server html-webpack-plugin`
 
 3. Set folder and file srtucture - inside the project directory
 
-   > `$ mkdir -p build src/common/scripts src/common/theme src/components src/templates && touch src/index.js webpack.config.js index.html`
+   > `mkdir -p build src/common/scripts src/common/theme src/components src/templates && touch src/index.js webpack.config.js index.html`
+   
+   3.1 - If the project is using MVC architecture
+      > - `mkdir -p src/scripts src/themes/compoenets src/themes/common && touch src/index.js src/scripts/controller.js src/scripts/view.js src/scripts/model.js src/themes/common/variables.scss src/themes/common/theme.scss src/themes/index.scss`
 
 4. Configure webpack entry file, the output file and the build mode
    > - open in editor `./webpack.config.js`
