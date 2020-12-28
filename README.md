@@ -18,7 +18,7 @@
       >  `mkdir -p src/scripts src/themes/compoenets src/themes/common && touch src/index.js src/index.html src/scripts/controller.js src/scripts/view.js src/scripts/model.js src/themes/common/variables.scss src/themes/common/theme.scss src/themes/index.scss`
    
    3.2 - Quick component DEMO project
-      > `mkdir -p components index theme && touch index/index.html index/index.scss index/index.js theme/theme.scss theme/variables.scss webpack.config.js`
+      > `mkdir -p src/components src/index src/theme && touch src/index/index.html src/index/index.scss src/index/index.js src/theme/theme.scss src/theme/variables.scss webpack.config.js`
 
 4. Configure webpack entry file, the output file and the build mode
    > - open in editor `./webpack.config.js`
