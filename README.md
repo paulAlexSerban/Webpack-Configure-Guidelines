@@ -12,7 +12,7 @@
 
 3. Set folder and file srtucture - inside the project directory
 
-   > `mkdir -p build src/common/scripts src/common/theme src/components src/templates && touch src/index.js webpack.config.js index.html`
+   > `mkdir -p src/common/scripts src/common/theme src/components && touch src/index.js src/index.html webpack.config.js`
    
    3.1 - If the project is using MVC architecture
       >  `mkdir -p src/scripts src/themes/compoenets src/themes/common && touch src/index.js src/index.html src/scripts/controller.js src/scripts/view.js src/scripts/model.js src/themes/common/variables.scss src/themes/common/theme.scss src/themes/index.scss`
