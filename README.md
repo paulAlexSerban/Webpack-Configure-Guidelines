@@ -8,7 +8,7 @@
 
 2. Install the Webpack NPM dependencies required for a basic project build
 
-   > `npm install --save-dev webpack webpack-cli css-loader styles-loader sass-loader node-sass @babel/core babel-loader @babel/plugin-proposal-class-properties @babel/preset-env terser-webpack-plugin mini-css-extract-plugin clean-webpack-plugin webpack-dev-server html-webpack-plugin`
+   > `npm install --save-dev webpack webpack-cli url-loader css-loader styles-loader sass-loader node-sass @babel/core babel-loader @babel/plugin-proposal-class-properties @babel/preset-env terser-webpack-plugin mini-css-extract-plugin clean-webpack-plugin webpack-dev-server html-webpack-plugin`
 
 3. Set folder and file srtucture - inside the project directory
 
@@ -188,6 +188,30 @@ module.exports = {
     writeToDisk: true
   },
 }
+```
+
+11. Configure the URL loader 
+```javascript
+module.exports = {
+...
+  },
+  module: {
+    rules: [
+      ...
+      {
+        test: /\.(png|jpg|gif|svg)$/i,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            name: '[name].[hash:7].[ext]'
+           },
+         }, 
+        ],
+      }
+    ]
+  },
+};
 ```
 
 ## Setup for OPTIMAL browser caching
